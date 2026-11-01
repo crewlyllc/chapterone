@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crewlyllc.github.io/chapterone/sitemap.xml

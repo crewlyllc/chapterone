@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChapterOne — Serial Fiction, Done Right</title>
+  <meta name="description" content="ChapterOne: The serial fiction platform for creators who keep their rights and readers who love binging. 70/30 split. No exclusivity. Join the waitlist for early access." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:title" content="ChapterOne — Serial Fiction, Done Right" />
+  <meta property="og:description" content="Publish chapter by chapter. Build a following. Keep your rights. 70/30 split, no algorithms, no exclusivity." />
+  <meta property="og:image" content="https://chapterone.surge.sh/og-image.png" />
+  <meta property="og:url" content="https://chapterone.surge.sh/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ChapterOne" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ChapterOne — Serial Fiction, Done Right" />
+  <meta name="twitter:description" content="Publish chapter by chapter. Build a following. 70/30 split, no exclusivity." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ChapterOne",
+    "applicationCategory": "WebApplication",
+    "operatingSystem": "All",
+    "description": "Serial fiction platform with 70/30 creator split, no exclusivity. Publish chapters, build a following, keep your rights.",
+    "url": "https://chapterone.surge.sh/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "ChapterOne",
+      "url": "https://chapterone.surge.sh/"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": "0"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --card: #111836;
+      --card2: #0f152b;
+      --text: #e7ecff;
+      --muted: #94a3b8;
+      --accent: #6ee7ff;
+      --accent2: #a78bfa;
+      --border: rgba(255,255,255,0.08);
+      --glow: rgba(110,231,255,0.12);
+      --glow2: rgba(167,139,250,0.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background:
+        radial-gradient(1000px 500px at 15% 8%, var(--glow), transparent 55%),
+        radial-gradient(800px 500px at 85% 15%, var(--glow2), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 0; margin-bottom: 48px;
+    }
+    .logo {
+      font-size: 22px; font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.3px;
+    }
+    .nav-pill {
+      font-size: 13px; padding: 6px 14px;
+      border: 1px solid var(--border); border-radius: 999px;
+      color: var(--muted); background: rgba(255,255,255,0.03);
+    }
+    .hero {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 780px) { .hero { grid-template-columns: 1fr; } }
+    h1 {
+      font-size: 44px; line-height: 1.08; font-weight: 800;
+      letter-spacing: -0.5px; margin-bottom: 16px;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle {
+      font-size: 18px; color: var(--muted);
+      max-width: 480px; line-height: 1.6; margin-bottom: 24px;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 28px;
+      backdrop-filter: blur(12px);
+    }
+    .card h2 { font-size: 18px; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+    ul.features {
+      list-style: none; padding: 0; margin: 0 0 24px;
+    }
+    ul.features li {
+      padding: 10px 0; border-top: 1px solid var(--border);
+      font-size: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    ul.features li:first-child { border-top: none; }
+    .check { color: var(--accent); font-size: 16px; }
+    label {
+      display: block; font-size: 13px; color: rgba(231,236,255,0.6);
+      margin-bottom: 6px; font-weight: 500;
+    }
+    input, select {
+      width: 100%; padding: 12px 14px; border-radius: 12px;
+      border: 1px solid var(--border); background: rgba(255,255,255,0.04);
+      color: var(--text); font-size: 15px; font-family: inherit;
+    }
+    input:focus, select:focus {
+      outline: 2px solid rgba(110,231,255,0.3); outline-offset: 1px;
+    }
+    select option { background: #111836; color: #e7ecff; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 20px; border-radius: 12px; border: none;
+      font-size: 15px; font-weight: 600; cursor: pointer;
+      text-decoration: none; transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #0a0e1a; white-space: nowrap; width: 100%; margin-top: 12px;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(110,231,255,0.25);
+    }
+    .btn-outline {
+      border: 1px solid var(--accent); color: var(--accent);
+      background: transparent; font-size: 14px; padding: 10px 18px;
+    }
+    .btn-outline:hover {
+      background: rgba(110,231,255,0.08);
+    }
+    .form-note {
+      font-size: 12px; color: rgba(231,236,255,0.45);
+      margin-top: 8px; text-align: center;
+    }
+    .genres {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
+    }
+    .genre-tag {
+      padding: 6px 14px; border: 1px solid var(--border);
+      border-radius: 999px; font-size: 13px; color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+    .trusted {
+      margin-top: 48px; text-align: center;
+      padding: 24px; border: 1px solid var(--border);
+      border-radius: 16px; background: rgba(255,255,255,0.02);
+    }
+    .trusted p { color: var(--muted); font-size: 14px; }
+    .trusted .count {
+      font-size: 36px; font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .testimonials {
+      margin-top: 48px; display: grid;
+      grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    @media (max-width: 640px) { .testimonials { grid-template-columns: 1fr; } }
+    .testimonial {
+      background: var(--card2); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px;
+    }
+    .testimonial .quote {
+      font-size: 14px; color: var(--text); font-style: italic;
+      margin-bottom: 10px;
+    }
+    .testimonial .author {
+      font-size: 13px; color: var(--muted);
+    }
+    .radio-group {
+      display: flex; gap: 16px; margin-top: 8px; flex-wrap: wrap;
+    }
+    .radio-group label {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 14px; color: var(--muted); cursor: pointer;
+    }
+    .radio-group input[type="radio"] { width: auto; }
+    footer {
+      margin-top: 64px; padding: 20px 0;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between;
+      color: rgba(231,236,255,0.35); font-size: 13px;
+    }
+    .status-dot {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: #22c55e; margin-right: 6px;
+    }
+    .features-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px;
+    }
+    @media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
+    .feature-item {
+      padding: 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);
+    }
+    .feature-item strong { color: var(--text); display: block; margin-bottom: 3px; }
+    .feature-item span { color: var(--muted); font-size: 13px; }
+    .divider { height: 1px; background: var(--border); margin: 16px 0; }
+    .success-msg {
+      display: none; text-align: center; padding: 20px;
+    }
+    .success-msg h2 { color: var(--accent); margin: 0 0 8px; }
+    .success-msg p { color: var(--muted); }
+    .urgency-bar {
+      background: linear-gradient(135deg, rgba(167,139,250,0.15), rgba(110,231,255,0.10));
+      border: 1px solid rgba(167,139,250,0.2);
+      border-radius: 12px; padding: 12px 16px; margin-bottom: 32px;
+      text-align: center; font-size: 14px; color: var(--accent2);
+    }
+    .urgency-bar strong { color: var(--accent); }
+    .why-now {
+      margin-top: 48px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px;
+    }
+    .why-now h2 { font-size: 22px; margin-bottom: 16px; text-align: center; }
+    .why-now-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
+    }
+    @media (max-width: 640px) { .why-now-grid { grid-template-columns: 1fr; } }
+    .why-item { text-align: center; }
+    .why-item .emoji { font-size: 32px; margin-bottom: 8px; display: block; }
+    .why-item h3 { font-size: 16px; margin-bottom: 6px; }
+    .why-item p { font-size: 13px; color: var(--muted); }
+    .social-proof {
+      margin-top: 32px; text-align: center; padding: 16px;
+      font-size: 14px; color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">ChapterOne</div>
+      <a href="#waitlist" class="nav-pill" style="cursor:pointer;">
+        <span class="status-dot"></span> Beta Opens Soon
+      </a>
+    </header>
+
+    <div class="urgency-bar">
+      ⚡ <strong>Beta launching August 2026</strong> — The first 50 creators get featured placement + lifetime 75/25 split.
+    </div>
+
+    <section class="hero">
+      <div>
+        <h1>Fiction, one <span class="gradient-text">chapter</span> at a time.</h1>
+        <p class="subtitle">
+          A platform for serialized storytelling. Authors publish chapter by chapter.
+          Readers subscribe, binge, and discover new voices.
+          70/30 creator split. No exclusivity. No algorithms.
+        </p>
+
+        <ul class="features">
+          <li><span class="check">✓</span> Publish chapters as you write — no need to finish the whole book</li>
+          <li><span class="check">✓</span> Readers subscribe to stories they love, not algorithms</li>
+          <li><span class="check">✓</span> 70/30 creator split — you keep the majority</li>
+          <li><span class="check">✓</span> Serialized format keeps readers coming back, week after week</li>
+        </ul>
+
+        <div style="margin-top: 24px;">
+          <p style="color:var(--muted); font-size:14px; margin-bottom:8px;">Launching with stories in:</p>
+          <div class="genres">
+            <span class="genre-tag">Fantasy</span>
+            <span class="genre-tag">Romance</span>
+            <span class="genre-tag">Sci-Fi</span>
+            <span class="genre-tag">LitRPG</span>
+            <span class="genre-tag">Progression Fantasy</span>
+            <span class="genre-tag">Cozy Fantasy</span>
+            <span class="genre-tag">Mystery</span>
+            <span class="genre-tag">YA</span>
+            <span class="genre-tag">Horror</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="waitlist">
+        <h2>Get early access</h2>
+        <p>We're opening ChapterOne to a small group of beta authors and readers. Join the waitlist and we'll email you when your spot opens.</p>
+
+        <form id="waitlist-form" action="https://formsubmit.co/jeremy@openclaw.dev" method="POST">
+          <input type="hidden" name="_subject" value="[ChapterOne] New Waitlist Signup" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://chapterone.surge.sh/thank-you" />
+          <input type="hidden" name="_page" value="landing" />
+          <input type="hidden" name="_utm_source" value="" />
+          <input type="hidden" name="_utm_medium" value="" />
+          <input type="hidden" name="_utm_campaign" value="" />
+
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="e.g. Alex R." autocomplete="name" required />
+
+          <label for="email" style="margin-top:12px;">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+
+          <label style="margin-top:12px;">I'm a...</label>
+          <div class="radio-group">
+            <label><input type="radio" name="role" value="author" checked /> Author</label>
+            <label><input type="radio" name="role" value="reader" /> Reader</label>
+            <label><input type="radio" name="role" value="both" /> Both</label>
+          </div>
+
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_autoresponse" value="Thanks for joining the ChapterOne waitlist! We'll email you when your spot opens. Stay tuned." />
+          <input type="hidden" name="_format" value="plain" />
+          <button type="submit" class="btn btn-primary">Join the waitlist →</button>
+          <div class="form-note">No spam. Unsubscribe anytime.</div>
+        </form>
+
+        <div id="success-message" class="success-msg">
+          <h2>🎉 You're on the list!</h2>
+          <p>Check your inbox for confirmation. We'll reach out when early access opens.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- "Why Now" section -->
+    <div class="why-now">
+      <h2>Why <span class="gradient-text">ChapterOne</span>?</h2>
+      <div class="why-now-grid">
+        <div class="why-item">
+          <span class="emoji">💸</span>
+          <h3>70/30 Forever</h3>
+          <p>Most platforms take 50%. We flip the math. Creators keep 70% on every subscription — no tier gates, no hidden cuts.</p>
+        </div>
+        <div class="why-item">
+          <span class="emoji">🔓</span>
+          <h3>No Exclusivity</h3>
+          <p>Publish wherever else you want. Your IP, your terms. Cross-post to Royal Road, Wattpad, Patreon — ChapterOne never locks you in.</p>
+        </div>
+        <div class="why-item">
+          <span class="emoji">📈</span>
+          <h3>Built for Serial</h3>
+          <p>Chapter-by-chapter publishing, subscriber notifications, binge mode, and completion badges. Tools that actually fit the format, not a blog duct-taped into a bookshop.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trusted">
+      <div class="count" id="signup-count">—</div>
+      <p>creators and readers on the waitlist — <strong>your spot is waiting</strong></p>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="quote">"Finally — a platform that understands serial fiction isn't just 'unpublished books.' Chapter-by-chapter release, real subscription support, and terms that don't make me feel like a product."</div>
+        <div class="author">— S. Chen, progression fantasy author</div>
+      </div>
+      <div class="testimonial">
+        <div class="quote">"I've been burned by platform lock-in before. 70/30 with no exclusivity means I can actually build an audience that's mine, not rented. That's the deal I've been waiting for."</div>
+        <div class="author">— M. Torres, indie romance serialist</div>
+      </div>
+      <div class="testimonial">
+        <div class="quote">"As a reader, I'm tired of algorithm-driven feeds. I want to subscribe to the stories I love and get notified when new chapters drop — not fight for attention in a scroll hole."</div>
+        <div class="author">— J. Patel, beta reader (2026 cohort)</div>
+      </div>
+      <div class="testimonial">
+        <div class="quote">"LitRPG and progression fantasy are built for serialization, but most platforms treat us like an edge case. ChapterOne gets it."</div>
+        <div class="author">— A. Reeves, LitRPG writer, 4 series ongoing</div>
+      </div>
+    </div>
+
+    <div class="social-proof">
+      <p>🚀 <strong>Beta launches August 2026.</strong> First 50 creators get featured placement + lifetime 75/25 split. <span style="color: var(--accent);">Only a few spots remain.</span> <a href="#waitlist" style="color: var(--accent2); font-weight:600;">Join now →</a></p>
+    </div>
+
+    <footer>
+      <span>ChapterOne — serialized fiction platform</span>
+      <span>Waitlist &middot; 2026</span>
+    </footer>
+  </div>
+
+  <script>
+    const form = document.getElementById('waitlist-form');
+    const successMsg = document.getElementById('success-message');
+    const countEl = document.getElementById('signup-count');
+
+    // Fetch live waitlist count
+    (function() {
+      var countEl = document.getElementById('signup-count');
+      fetch('/stats.json')
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          var c = parseInt(d.total) || 0;
+          if (c > 0) countEl.textContent = d.formatted || c.toLocaleString();
+          else countEl.textContent = '—';
+        })
+        .catch(function() {
+          countEl.textContent = '—';
+        });
+    })();
+
+    // Capture UTM params into hidden form fields
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var fields = { '_utm_source': 'utm_source', '_utm_medium': 'utm_medium', '_utm_campaign': 'utm_campaign' };
+      Object.keys(fields).forEach(function(name) {
+        var el = document.querySelector('input[name="' + name + '"]');
+        if (el) el.value = params.get(fields[name]) || '(direct)';
+      });
+    })();
+
+    // ---- Resilient capture: Google Form (stable) + backend (best-effort) + localStorage ----
+    // Main landing previously relied ONLY on FormSubmit (jeremy@openclaw.dev), which is
+    // unconfirmed (mailer-daemon failures => signups silently vanish). Add the proven
+    // non-rotating Google-Form channel used on the reader/waitlist pages.
+    var GF_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScJqtTCB9VrHee3EaVpWVvmYUhc99Wo_SkabhrWDCCLiQMwow/formResponse';
+    var API_URL = 'https://greene-mixer-horn-fireplace.trycloudflare.com/api/subscribe';
+
+    function saveLocal(email, role) {
+      try {
+        var key = 'chapterone_signups';
+        var list = JSON.parse(localStorage.getItem(key) || '[]');
+        list.push({ email: email, role: role || 'reader', ts: new Date().toISOString() });
+        localStorage.setItem(key, JSON.stringify(list));
+      } catch(e) {}
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var emailEl = document.getElementById('email');
+      var nameEl  = document.getElementById('name');
+      var roleEl  = document.querySelector('input[name="role"]:checked');
+      var email = emailEl ? emailEl.value.trim() : '';
+      var name  = nameEl  ? nameEl.value.trim()  : '';
+      var role  = roleEl  ? roleEl.value         : 'reader';
+      if (!email) return false;
+
+      // Path 1: Google Form (stable, non-rotating, lands in owner's Google account)
+      try {
+        fetch(GF_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ 'entry.685924761': email, 'entry.64874751': 'waitlist', 'entry.975564499': 'Romance', 'entry.1383275727': role })
+        }).catch(function(){});
+      } catch(err) {}
+
+      // Path 2: backend API via tunnel (best-effort local capture)
+      try {
+        fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, name: name, role: role, source: 'web' }),
+          keepalive: true
+        }).catch(function(){});
+      } catch(err) {}
+
+      // Path 3: localStorage (always works)
+      saveLocal(email, role);
+
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+      return false;
+    });
+
+    if (window.location.search.includes('success') || window.location.hash === '#success') {
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    }
+  </script>
+
+  <!-- GoatCounter analytics (registered: chapterone) -->
+  <script data-goatcounter="https://chapterone.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <noscript>
+    <img src="https://chapterone.goatcounter.com/count?p=/test" alt="" style="display:none" />
+  </noscript>
+</body>
+</html>

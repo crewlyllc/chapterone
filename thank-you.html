@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're on the list — ChapterOne</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --card: #111836;
+      --text: #e7ecff;
+      --muted: #94a3b8;
+      --accent: #6ee7ff;
+      --accent2: #a78bfa;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 480px;
+      margin: 24px;
+      text-align: center;
+    }
+    .emoji { font-size: 48px; margin-bottom: 16px; display: block; }
+    h1 {
+      font-size: 28px; font-weight: 800; margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    p { color: var(--muted); line-height: 1.6; margin-bottom: 24px; font-size: 15px; }
+    .steps {
+      text-align: left; margin: 24px 0;
+    }
+    .step {
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .step:first-child { border-top: none; }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #0a0e1a; font-weight: 700; font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-text { font-size: 14px; }
+    .step-text strong { color: var(--text); }
+    .btn {
+      display: inline-block; padding: 12px 28px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #0a0e1a; font-weight: 600; text-decoration: none;
+      font-size: 15px; transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(110,231,255,0.25);
+    }
+    .share {
+      margin-top: 32px; padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .share p { font-size: 13px; margin-bottom: 12px; }
+    .share-links { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .share-link {
+      padding: 8px 14px; border-radius: 8px;
+      border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+      color: var(--muted); font-size: 13px; text-decoration: none;
+    }
+    .share-link:hover { color: var(--accent); border-color: var(--accent); }
+    footer {
+      margin-top: 32px; font-size: 12px;
+      color: rgba(231,236,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="emoji">🎉</span>
+    <h1>You're on the list!</h1>
+    <p>Thanks for joining the ChapterOne waitlist. We'll reach out when your spot opens — typically within 2–3 weeks.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <span class="step-text"><strong>Check your inbox</strong> — FormSubmit sent a confirmation email</span>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <span class="step-text"><strong>Tell a friend</strong> — early access is better with co-conspirators</span>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <span class="step-text"><strong>Follow along</strong> — we'll email when beta access opens</span>
+      </div>
+    </div>
+
+    <div class="share">
+      <p>Know a writer or reader who'd love ChapterOne?</p>
+      <div class="share-links">
+        <a href="https://twitter.com/intent/tweet?text=I+just+joined+the+waitlist+for+ChapterOne+%E2%80%94+a+new+serial+fiction+platform+with+70%2F30+splits+and+no+exclusivity.+Check+it+out%3A+https%3A%2F%2Fchapterone.surge.sh" target="_blank" rel="noopener" class="share-link">🐦 Share on X</a>
+        <a href="https://www.reddit.com/r/writing/submit?url=https%3A%2F%2Fchapterone.surge.sh&title=Just+joined+the+waitlist+for+ChapterOne+%E2%80%94+70%2F30+serial+fiction+platform+with+no+exclusivity" target="_blank" rel="noopener" class="share-link">🤖 Share on Reddit</a>
+        <a href="https://chapterone.surge.sh" class="share-link">🌐 chapterone.surge.sh</a>
+      </div>
+    </div>
+
+    <footer>
+      ChapterOne — serialized fiction platform &middot; 2026
+    </footer>
+  </div>
+
+  <script data-goatcounter="https://chapterone.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

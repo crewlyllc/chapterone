@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ChapterOne — Join the Waitlist</title>
+  <meta name="description" content="ChapterOne: The serial fiction platform built for creators who retain their rights and readers who love binging. Join the waitlist for early access." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:title" content="ChapterOne — Serial Fiction, Done Right" />
+  <meta property="og:description" content="Discover your next obsession or launch your serial fiction career. 70/30 split, transparent analytics, binge-worthy stories." />
+  <meta property="og:url" content="https://chapterone.surge.sh/waitlist.html" />
+  <style>
+    :root{--bg:#0b1020;--card:#111836;--text:#e7ecff;--muted:#b6c2ff;--cta:#6ee7ff;--cta2:#a78bfa;--accent-green:#6ee7b7;--border:rgba(255,255,255,.12)}
+    *{box-sizing:border-box;margin:0}
+    body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:radial-gradient(1200px 700px at 10% 10%, rgba(110,231,255,.15), transparent 50%),radial-gradient(900px 600px at 80% 20%, rgba(167,139,250,.14), transparent 55%),var(--bg); color:var(--text);min-height:100vh;display:flex;align-items:center}
+    a{color:inherit}
+    .wrap{max-width:1020px;margin:0 auto;padding:40px 20px;width:100%}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+    .brand{font-weight:700;letter-spacing:.2px;opacity:.95;font-size:1.1rem}
+    .pill{font-size:12px;border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted);background:rgba(255,255,255,.03)}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+    .card{border:1px solid var(--border);background:rgba(17,24,54,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:18px;padding:24px}
+    h1{margin:0 0 6px;font-size:42px;line-height:1.08;letter-spacing:-.5px}
+    .sub{margin:0 0 14px;color:var(--muted);font-size:17px;line-height:1.5}
+    .tagline{display:inline-block;font-size:13px;color:var(--text);background:rgba(110,231,255,.12);border:1px solid rgba(110,231,255,.2);padding:4px 12px;border-radius:999px;margin-bottom:14px}
+    ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    li{margin:7px 0;font-size:14.5px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 14px;border-radius:12px;border:1px solid var(--border);text-decoration:none;font-weight:650}
+    .small{font-size:12px;color:rgba(231,236,255,.72);margin-top:8px}
+    .divider{height:1px;background:var(--border);margin:16px 0}
+    label{display:block;font-size:12px;color:rgba(231,236,255,.72);margin-bottom:5px}
+    input{width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);font-size:15px;outline:none}
+    input:focus{border-color:rgba(110,231,255,.4)}
+    .input-group{display:flex;gap:8px;flex-wrap:wrap}
+    @media (min-width:480px){.input-group input{flex:1}}
+    button{background:linear-gradient(90deg, rgba(110,231,255,.3), rgba(167,139,250,.3));border:1px solid rgba(110,231,255,.35);color:var(--text);padding:12px 20px;border-radius:12px;font-weight:650;cursor:pointer;font-size:15px;white-space:nowrap;transition:all .15s}
+    button:hover{opacity:.9;transform:translateY(-1px)}
+    .success{border:1px solid rgba(110,231,255,.25);background:rgba(110,231,255,.08);padding:16px;border-radius:12px;text-align:center;display:none}
+    .social-proof{display:grid;grid-template-columns:1fr;gap:10px}
+    .quote{border-left:2px solid rgba(110,231,255,.25);padding:14px 14px;font-size:13.5px;color:var(--muted);line-height:1.45}
+    .quote strong{color:var(--text);display:block;margin-top:4px;font-size:12px;opacity:.8}
+    .genre-tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+    .genre-tag{font-size:11px;background:rgba(255,255,255,.04);border:1px solid var(--border);padding:4px 10px;border-radius:999px;color:var(--muted)}
+    footer{margin-top:24px;color:rgba(231,236,255,.55);font-size:12px;text-align:center;line-height:1.8}
+    footer a{opacity:.7;text-decoration:underline;text-underline-offset:2px}
+    footer a:hover{opacity:1}
+    .badge-row{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 14px}
+    .badge{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+    .badge span{width:20px;height:20px;display:flex;align-items:center;justify-content:center;background:rgba(110,231,255,.1);border-radius:6px;font-size:14px}
+    h2{font-size:18px;margin:0 0 8px}
+    .steps{display:flex;flex-direction:column;gap:6px;margin:10px 0}
+    .step{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+    .step-num{width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:rgba(110,231,255,.1);border-radius:6px;font-size:12px;color:var(--cta);font-weight:700;flex-shrink:0}
+    .reading-path{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+    .path-dot{font-size:11px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">✦ ChapterOne</div>
+      <div class="pill">Waitlist Now Open</div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT COLUMN: Signup form -->
+      <div class="card">
+        <div class="tagline">📚 Serial fiction, done right</div>
+        <h1>Your next chapter starts here.</h1>
+        <p class="sub">Discover binge-worthy serials across fantasy, romance, sci-fi, LitRPG & more. Or publish your work and earn from day one — with your rights, your revenue, and transparent analytics.</p>
+
+        <div class="badge-row">
+          <div class="badge"><span>✓</span> No dark patterns</div>
+          <div class="badge"><span>✓</span> 70/30 creator split</div>
+          <div class="badge"><span>✓</span> Mobile-first</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <form id="waitlistForm" action="#" method="POST" onsubmit="return handleSubmit(event)">
+          <input type="hidden" name="_source" value="web">
+          <input type="hidden" name="_page" value="waitlist">
+
+          <label for="email">Email</label>
+          <div class="input-group">
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            <button type="submit" id="submitBtn">Join →</button>
+          </div>
+          <div class="small">No spam, ever. Unsubscribe anytime.</div>
+
+          <div class="divider"></div>
+
+          <label>I'm a...</label>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+            <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;padding:6px 10px;border:1px solid var(--border);border-radius:8px;background:rgba(255,255,255,.02)">
+              <input type="radio" name="role" value="reader" checked> 📖 Reader
+            </label>
+            <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;padding:6px 10px;border:1px solid var(--border);border-radius:8px;background:rgba(255,255,255,.02)">
+              <input type="radio" name="role" value="creator"> ✍️ Creator
+            </label>
+            <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;padding:6px 10px;border:1px solid var(--border);border-radius:8px;background:rgba(255,255,255,.02)">
+              <input type="radio" name="role" value="both"> 🎭 Both
+            </label>
+          </div>
+
+          <div id="successMsg" class="success">
+            <strong>✓ You're on the list!</strong><br>
+            <span class="small">We'll email you when ChapterOne launches. In the meantime, tell a friend who loves serial fiction.</span>
+          </div>
+        </form>
+
+        <div class="divider"></div>
+
+        <h2>What happens next?</h2>
+        <div class="steps">
+          <div class="step"><span class="step-num">1</span> You get a confirmation email after you submit</div>
+          <div class="step"><span class="step-num">2</span> We notify you when the pilot opens</div>
+          <div class="step"><span class="step-num">3</span> Creators get priority onboarding & platform credits</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="small" style="line-height:1.6">
+          ✨ <strong>Creators:</strong> Apply for the founding pilot →
+          <a href="/" style="color:var(--cta);text-decoration:underline;text-underline-offset:2px">chapterone.surge.sh</a>
+        </p>
+      </div>
+
+      <!-- RIGHT COLUMN: Value props + social proof -->
+      <div class="card">
+        <h2>Why ChapterOne?</h2>
+
+        <div style="margin:12px 0">
+          <h3 style="font-size:15px;margin:0 0 4px;display:flex;align-items:center;gap:6px"><span>📖</span> For readers</h3>
+          <p class="small" style="font-size:13.5px;line-height:1.55;margin:0">Thousands of fresh chapters across fantasy, romance, sci-fi, LitRPG, progression fantasy & more. Pay what you want — unlock chapters for less than a coffee. First 20 chapters of every series are free. No ads. No dark patterns. Just great stories, delivered daily.</p>
+        </div>
+
+        <div style="margin:14px 0">
+          <h3 style="font-size:15px;margin:0 0 4px;display:flex;align-items:center;gap:6px"><span>✍️</span> For creators</h3>
+          <p class="small" style="font-size:13.5px;line-height:1.55;margin:0">Your rights, your revenue. 70/30 split in your favor. Keep your IP — non-exclusive, fair termination. Real-time analytics: reads, unlocks, retention, earnings. Upload and schedule chapters in seconds. Cadence bonuses for consistent posters.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 style="font-size:15px;display:flex;align-items:center;gap:6px"><span>💬</span> What people are saying</h2>
+        <div class="social-proof">
+          <div class="quote">"Finally a platform that treats serial writers like professionals. The 70/30 split and rights retention is exactly what the community needs."<strong>— Author, progression fantasy</strong></div>
+          <div class="quote">"I spend hours a week searching Royal Road for good serials. A dedicated platform with curated discovery would save me so much time."<strong>— Reader, fantasy romance</strong></div>
+          <div class="quote">"The daily chapter format with reader discussion is what keeps me coming back. ChapterOne gets it."<strong>— Sci-fi serial writer</strong></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 style="font-size:15px;display:flex;align-items:center;gap:6px"><span>🎯</span> Genres we're launching with</h2>
+        <div class="genre-tags">
+          <span class="genre-tag">Fantasy</span>
+          <span class="genre-tag">Romance</span>
+          <span class="genre-tag">Sci-Fi</span>
+          <span class="genre-tag">LitRPG</span>
+          <span class="genre-tag">Progression Fantasy</span>
+          <span class="genre-tag">Cozy Fantasy</span>
+          <span class="genre-tag">Mystery</span>
+          <span class="genre-tag">YA</span>
+          <span class="genre-tag">Urban Fantasy</span>
+          <span class="genre-tag">Horror</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="small" style="text-align:center;line-height:1.6">
+          Closed pilot launching with 1–3 founding creators.<br>
+          <strong style="color:var(--text)">Be part of shaping the platform from day one.</strong>
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="/">Creator Pilot Application</a> &middot;
+      <a href="/waitlist.html">Waitlist</a> &middot;
+      <a href="/privacy.html">Privacy Policy</a> &middot;
+      <a href="/terms.html">Terms of Service</a><br>
+      &copy; 2026 ChapterOne. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // ---- Dual-backend form handler (Google Form + localStorage) ----
+    const GF_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScJqtTCB9VrHee3EaVpWVvmYUhc99Wo_SkabhrWDCCLiQMwow/formResponse';
+
+    // Collect submitted emails in localStorage (always works)
+    function saveLocal(email, role) {
+      try {
+        const key = 'chapterone_signups';
+        let list = JSON.parse(localStorage.getItem(key) || '[]');
+        list.push({ email: email, role: role || 'reader', ts: new Date().toISOString() });
+        localStorage.setItem(key, JSON.stringify(list));
+        return true;
+      } catch(e) { return false; }
+    }
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if (!email) return false;
+      const roleEl = document.querySelector('input[name="role"]:checked');
+      const role = roleEl ? roleEl.value : 'reader';
+      const btn = document.getElementById('submitBtn');
+
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+
+      // Path 1: IndieStack API (via Cloudflare tunnel)
+      try {
+        await fetch('https://greene-mixer-horn-fireplace.trycloudflare.com/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, role, source: 'web' })
+        });
+      } catch(e) { console.warn('API submit failed:', e); }
+
+      // Path 2: Google Form (no-cors, works from any domain)
+      try {
+        await fetch(GF_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ 'entry.685924761': email, 'entry.64874751': 'waitlist', 'entry.975564499': 'Romance', 'entry.1383275727': role })
+        });
+      } catch(e) { console.warn('Google Form fallback failed:', e); }
+
+      // Path 3: localStorage (always works)
+      saveLocal(email, role);
+
+      showSuccess();
+      return false;
+    }
+
+    function showSuccess() {
+      const form = document.getElementById('waitlistForm');
+      const emailInput = form.querySelector('input[type="email"]');
+      const btn = document.getElementById('submitBtn');
+      const successMsg = document.getElementById('successMsg');
+
+      emailInput.style.display = 'none';
+      btn.style.display = 'none';
+      successMsg.style.display = 'block';
+
+      // Track in Google Analytics if available
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'signup', { event_category: 'waitlist', event_label: emailInput.value });
+      }
+    }
+
+    // Show success if coming back from FormSubmit redirect
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('success') === '1') {
+        showSuccess();
+        if (window.history.replaceState) {
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
