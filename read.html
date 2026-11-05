@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Signal Keeper — read a sample on ChapterOne</title>
+<meta name="description" content="Read the first three chapters of The Signal Keeper free on ChapterOne — no signup, no email, no ads. A serial fiction platform where chapter one is always open." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta property="og:title" content="The Signal Keeper — a serial you can read right now" />
+<meta property="og:description" content="Chapters 1–3 free. No signup. See what reading serial fiction actually feels like on ChapterOne." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="ChapterOne" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+<style>
+  :root{
+    --bg:#0a0e1a; --card:#111836; --text:#e7ecff; --muted:#94a3b8;
+    --accent:#6ee7ff; --accent2:#a78bfa; --border:rgba(255,255,255,0.08);
+    --glow:rgba(110,231,255,0.12); --glow2:rgba(167,139,250,0.10);
+    --prose:#dbe3f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    background:radial-gradient(1000px 500px at 15% 8%,var(--glow),transparent 55%),
+               radial-gradient(800px 500px at 85% 15%,var(--glow2),transparent 55%),var(--bg);
+    color:var(--text);min-height:100vh;line-height:1.5;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:28px 22px 80px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:10px 0;margin-bottom:34px;gap:12px}
+  .logo{font-size:21px;font-weight:700;text-decoration:none;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.3px}
+  .back{font-size:13px;color:var(--muted);text-decoration:none;border:1px solid var(--border);
+    padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.03);white-space:nowrap}
+  .back:hover{color:var(--text);border-color:rgba(110,231,255,.4)}
+  .badge{display:inline-block;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--accent);border:1px solid rgba(110,231,255,.3);background:rgba(110,231,255,.07);
+    padding:5px 11px;border-radius:999px;margin-bottom:16px}
+
+  /* ---------- series / title page ---------- */
+  .cover{height:170px;border-radius:18px;margin-bottom:22px;position:relative;overflow:hidden;
+    background:linear-gradient(150deg,#0d1730 0%,#16204a 45%,#2a1c4d 100%);
+    border:1px solid var(--border);display:flex;align-items:flex-end;padding:20px}
+  .cover::after{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(90deg,transparent 0 7px,rgba(110,231,255,.06) 7px 8px);opacity:.8}
+  .cover .glowdot{position:absolute;top:26px;right:34px;width:9px;height:9px;border-radius:50%;
+    background:var(--accent);box-shadow:0 0 22px 8px rgba(110,231,255,.45)}
+  .cover span{position:relative;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(231,236,255,.62)}
+  h1.title{font-size:38px;line-height:1.1;font-weight:800;letter-spacing:-.6px;margin-bottom:10px}
+  .byline{color:var(--muted);font-size:14.5px;margin-bottom:18px}
+  .byline b{color:#c7d2fe;font-weight:600}
+  .blurb{color:var(--prose);font-size:16.5px;line-height:1.65;margin-bottom:24px}
+  .stats{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:var(--muted);
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 0;margin-bottom:24px}
+  .stats b{color:var(--text);font-weight:600}
+  .btn{display:inline-block;padding:13px 24px;border-radius:11px;font-size:15px;font-weight:700;
+    text-decoration:none;border:none;cursor:pointer;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));color:#08101f;transition:transform .15s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border);font-weight:600}
+  .btn.ghost:hover{border-color:rgba(110,231,255,.45)}
+  .toc{margin-top:34px}
+  .toc h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  .toc a{display:flex;justify-content:space-between;align-items:baseline;gap:14px;text-decoration:none;
+    color:var(--text);padding:15px 16px;border:1px solid var(--border);border-radius:12px;
+    background:rgba(255,255,255,.02);margin-bottom:9px;transition:border-color .15s,background .15s}
+  .toc a:hover{border-color:rgba(110,231,255,.4);background:rgba(110,231,255,.05)}
+  .toc .n{font-size:11.5px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:3px}
+  .toc .t{font-weight:600;font-size:16px}
+  .toc .len{font-size:12px;color:var(--muted);white-space:nowrap}
+
+  /* ---------- reader ---------- */
+  .readbar{position:sticky;top:0;z-index:20;background:rgba(10,14,26,.9);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);margin:0 -22px 26px;padding:11px 22px;
+    display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12.5px;color:var(--muted)}
+  .readbar b{color:var(--text)}
+  .prose-body{max-width:640px;margin:0 auto}
+  .prose-body h2{font-size:26px;line-height:1.25;font-weight:800;letter-spacing:-.4px;margin-bottom:6px}
+  .prose-body .chmeta{font-size:12.5px;color:var(--muted);margin-bottom:26px}
+  .prose-body p{color:var(--prose);font-size:18px;line-height:1.78;margin-bottom:20px;font-family:Georgia,'Iowan Old Style',serif}
+  .prose-body p:first-of-type::first-letter{font-size:52px;float:left;line-height:.86;padding:4px 10px 0 0;
+    font-weight:700;color:var(--accent);font-family:ui-sans-serif,system-ui,sans-serif}
+  .endcta{margin:40px 0 10px;padding:26px;border-radius:18px;border:1px solid rgba(110,231,255,.24);
+    background:linear-gradient(160deg,rgba(110,231,255,.07),rgba(167,139,250,.06))}
+  .endcta h3{font-size:19px;margin-bottom:7px}
+  .endcta p{font-family:inherit;font-size:14px;color:var(--muted);margin-bottom:16px;line-height:1.55}
+  .navbtns{display:flex;justify-content:space-between;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .foot{margin-top:44px;padding-top:18px;border-top:1px solid var(--border);font-size:12.5px;color:var(--muted);
+    display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .foot a{color:var(--muted)}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="https://chapterone.surge.sh/">ChapterOne</a>
+    <a class="back" href="#/">← All samples</a>
+  </header>
+
+  <!-- ================= TITLE PAGE ================= -->
+  <div id="titlepage">
+    <div class="badge">Free sample · no signup</div>
+    <div class="cover"><div class="glowdot"></div><span>ChapterOne Originals · Sample</span></div>
+    <h1 class="title">The Signal Keeper</h1>
+    <p class="byline">by <b>Elin Rask</b> · science fiction · updated weekly</p>
+    <p class="blurb">
+      Mara Vidal runs a decommissioned listening array on the Icelandic coast — twelve antennas, one
+      bad chair, and a job that mostly involves confirming that nothing happens. Then, at 03:14 on a
+      Tuesday, the array picks up a shipping forecast for <b>Sandvík</b>: population 212, winds
+      southwest force four, visibility good.
+      <br><br>
+      Sandvík does not exist. It has never existed. And someone in it has started saying her name.
+    </p>
+    <div class="stats">
+      <span><b>3</b> chapters in sample</span>
+      <span><b>~2,100</b> words</span>
+      <span><b>4 min</b> read</span>
+      <span>Ongoing</span>
+    </div>
+    <a class="btn" href="#/ch/1">Start reading →</a>
+    <div class="toc">
+      <h2>Chapters</h2>
+      <div id="toclist"></div>
+    </div>
+  </div>
+
+  <!-- ================= READER ================= -->
+  <div id="reader" class="hidden">
+    <div class="readbar">
+      <span><b>The Signal Keeper</b> · <span id="rbnum"></span></span>
+      <a href="#/" style="color:var(--accent);text-decoration:none">Contents</a>
+    </div>
+    <div class="prose-body" id="prosebody"></div>
+  </div>
+
+  <div class="foot">
+    <span>© 2026 ChapterOne · sample content, freely readable</span>
+    <span><a href="https://chapterone.surge.sh/">chapterone.surge.sh</a></span>
+  </div>
+</div>
+
+<script>
+const WAITLIST = "https://chapterone.surge.sh/#waitlist";
+
+const chapters = [
+  {
+    n: 1,
+    title: "Twelve Antennas, One Bad Chair",
+    len: "3 min",
+    body: [
+      "The chair was the worst part of the job, which is how Mara knew the job was fine. If the chair had been good, she would have had to think about the rest of it.",
+      "It was a green office chair with a gas cylinder that had died sometime during the previous government, so she sat permanently at the height of a tall child. From there she could see the whole room: the wall of receivers, the four monitors with their slow green breathing, the kettle that took eleven minutes and was worth it every time. Outside, the North Atlantic did what it always did, which was pretend to be a wall.",
+      "The array sat on the headland behind the station — twelve antennas in a field of lava rock, tilted into the wind like people listening. Officially she was the night operator of a decommissioned signals station. Unofficially she was the only thing keeping the lights on in a building that the ministry had forgotten to close, and the ministry, in its wisdom, had forgotten to check whether anyone was still there. She filed a monthly report. Nobody had ever replied to one. That suited her.",
+      "Her job, in practice, was to confirm that nothing happened. She had a checklist for it. At the top of each hour she walked the room, read the dials, wrote the numbers down in pencil, and drank whatever the kettle had produced. The numbers were always the same numbers. She had been doing this for two years and four months, and in that time the most exciting event had been a seal.",
+      "At 03:14 on a Tuesday, something happened.",
+      "It arrived as a hiss on the 6.2 MHz band, which was not unusual. Weather fax, fishing chatter, a cargo ship arguing with a harbourmaster in three languages — the band was a bus station. But the hiss had a shape to it. She leaned forward, and the chair, that traitor, sank two centimetres.",
+      "A woman's voice, unhurried, reading a bulletin.",
+      "\u201c…winds southwest, force four, veering westerly by morning. Visibility good. Sea state slight. Sandvík harbour reports no restrictions. Outlook for Thursday: settled. That is the end of the forecast for the Sandvík district, 03:00 hours.\u201d",
+      "Then a click. Then static, which went back to being only static.",
+      "Mara sat very still in her tall-child chair. She replayed it. She replayed it again, and the third time she wrote the time down in pencil, because that was the procedure, and procedure was the thing you held on to when your hands wanted to do something else.",
+      "Sandvík. She knew the coast. She had grown up eighty kilometres north of here, she had spent a childhood being driven along that road with her forehead against the window, and she knew every inlet on the map from Höfn to Ísafjörður. There was no Sandvík. There was no district of Sandvík. It was not a small place she had forgotten; it was a sound a place would make if a place could be invented.",
+      "She pulled the coastal register and read it end to end, which took until the light started coming back. Two hundred and eleven named settlements. Not one of them Sandvík.",
+      "At 05:40 the kettle finished its eleven minutes. She made coffee she did not drink, and looked at the logbook, and looked at the open line she was not supposed to key up without authorisation from a ministry that had never once written back.",
+      "At 05:41 she pressed the transmit key and said, \u201cSandvík, this is station Hvítaberg. Say again your district. Over.\u201d",
+      "The static went on for a long time. Long enough for her to feel foolish, and then long enough for her to feel something else.",
+      "Then, clear as a person standing behind her: \u201cHvítaberg, we hear you. Winds southwest, force four. Mara — you're early.\u201d"
+    ]
+  },
+  {
+    n: 2,
+    title: "Population 212",
+    len: "4 min",
+    body: [
+      "There are three things you can do when a radio says your name.",
+      "You can decide you misheard. Mara tried this for approximately nine seconds. She had a recording, and the recording said her name with the flat Westfjords vowel she had spent eleven years sanding off, the way her mother said it. Not the way a stranger would say it.",
+      "You can decide someone is playing a joke. She checked the building for this, thoroughly and without dignity: the storage room, the generator shed, the roof hatch, both doors, and the car park, where her own car sat alone under a sky the colour of a wet newspaper. The nearest human being was a farmer four kilometres inland who did not own a radio and had once described her as \u201cthe woman who fixes the lights.\u201d",
+      "Or you can answer.",
+      "She answered.",
+      "\u201cSandvík, this is Hvítaberg,\u201d she said, and her voice was steady, which surprised her. \u201cIdentify your station. Over.\u201d",
+      "A pause, and in the pause she heard something she had not heard in two years and four months of silence: other people. Not voices, exactly. A door. Something metal set down on something wood. The particular underwater murmur of a room with a dozen people in it who have agreed not to talk.",
+      "\u201cHvítaberg,\u201d the woman said at last, \u201cwe're the harbour office. We'd ask you to identify yours, but you've been on that headland since the spring of 2024 and we know what you are.\u201d",
+      "Mara looked at the logbook. She had written the numbers in it every hour for two years and four months, in pencil, in her own careful hand.",
+      "\u201cYou've been listening to me,\u201d she said. It was not a question, so she did not say \u201cover.\u201d",
+      "\u201cWe hear the whole coast,\u201d the woman said. \u201cThat's the job. Sandvík harbour office, out.\u201d",
+      "The line clicked, and she was alone with twelve antennas and a room that had never felt so full.",
+      "—",
+      "She spent the morning doing the thing she was good at, which was being methodical about something impossible.",
+      "Direction finder: 214 degrees true. She took the bearing four more times across six hours and it did not move a degree, which meant it was not skip, not a reflection off the ice cap, not a ship. It came from a fixed point on a coastline that had no fixed point there. The bearing put it forty-one kilometres out into water that the charts said was nine hundred metres deep.",
+      "She called the ministry. She got a voicemail box that had been full since the previous March.",
+      "She called the coast guard in Reykjavík, and a patient man named Tómas listened to all of it and said, \u201cSandvík. S-a-n-d-v-í-k?\u201d and she said yes, and he said, \u201cThere's a Sandvík in the Faroes. There's a Sandvík in Sweden. There's no Sandvík here. Are you all right up there?\u201d",
+      "\u201cI'm fine,\u201d she said, which was the first untrue thing she had said in some time.",
+      "He promised to look into it. She wrote that down too, because promises from Reykjavík had a way of evaporating, and because writing things down was the only trick she knew for keeping her hands from shaking.",
+      "—",
+      "That night she did not sleep, and at 03:00 she was at the desk, and at 03:14 the hiss came back with its shape in it, and this time she was ready.",
+      "\u201cSandvík, Hvítaberg,\u201d she said. \u201cI have a question and I'd like a straight answer. What is the population of Sandvík? Over.\u201d",
+      "The pause was shorter this time. She heard the room again, and a chair, and then the woman, and the woman's voice had changed. It had the sound of someone who had decided to stop pretending.",
+      "\u201cTwo hundred and twelve,\u201d she said. \u201cIt has been two hundred and twelve since the ninth of March. That's why we're talking to you, Mara. It's going to be two hundred and eleven, and then the forecast stops.\u201d",
+      "Mara's pencil did not move.",
+      "\u201cWhose number is it?\u201d she said.",
+      "Static. A door. The room with all its people in it, breathing.",
+      "\u201cYours,\u201d the woman said."
+    ]
+  },
+  {
+    n: 3,
+    title: "What the Forecast Is For",
+    len: "4 min",
+    body: [
+      "She had a rule, from before. Before the station, before the silence, before she had come north to look after a building nobody wanted: never make a decision at three in the morning. Three in the morning is a country with its own laws. People get married there, buy boats there, forgive their fathers there. Nothing decided at three survives the sun.",
+      "She broke the rule at 03:31.",
+      "\u201cGive me something I can check,\u201d she said. \u201cNot a name. A fact. Something that's true tomorrow where you are and verifiable where I am.\u201d",
+      "The harbour office woman — she had a name now, Jóna, and a brother in Reykjavík who was dead, and she said the name of the brother the way you say a thing you have said too many times — thought about it.",
+      "\u201cThe Grímsey ferry,\u201d Jóna said. \u201cIt loses a propeller housing on Thursday. Nineteen forty. No one hurt. It limps into Húsavík at two in the morning and the story is on the news for one day and then it isn't.\u201d",
+      "\u201cThat's a thing that hasn't happened,\u201d Mara said.",
+      "\u201cEverything hasn't happened yet,\u201d said Jóna. \u201cThat's what forecasts are for.\u201d",
+      "—",
+      "On Thursday at 19:40 Mara stood in the receiver room with her arms folded and listened to a ferry captain swear in a manner that suggested a great deal of paperwork in his future. At 02:10 she heard the Húsavík harbourmaster confirm an arrival. On Friday it was in the news for one day, nineteen lines, a photograph of a dock, and then it wasn't.",
+      "She read the nineteen lines eleven times.",
+      "Here is what she had, written in pencil, in her own careful hand: a place that was not on any chart; a population that had been the same for eight months; a broadcast that described the future in the flat, bored voice of a woman reading a shipping forecast; and a bearing of 214 degrees true, over nine hundred metres of water, where twelve antennas said there was a room with people in it.",
+      "And her own name, in her mother's vowels.",
+      "—",
+      "She had told nobody. That was not caution, it was something closer to shame. She knew exactly how it would sound. The woman who fixes the lights, alone on a headland, hearing voices. Tómas in Reykjavík had already asked whether she was all right up there. She had heard what he was actually asking.",
+      "So on the ninth night she asked the question she had been walking around for a week, the way you walk around a hole in the floor.",
+      "\u201cJóna. What happens on the ninth of March?\u201d",
+      "The static was longer than it had ever been. She could hear the kettle in the room behind the radio, which was ridiculous, and she could hear someone crying, quietly, in the way people cry when they think a microphone is off.",
+      "\u201cThe forecast ends,\u201d Jóna said. \u201cIt always ends the same way. Sandvík district, two hundred and twelve. Then two hundred and eleven. Then the shipping forecast is for somewhere else, and there is no district, and the coast is quiet for nineteen hours, and then it isn't quiet at all.\u201d",
+      "\u201cNineteen hours,\u201d Mara said.",
+      "\u201cNineteen forty,\u201d said Jóna. \u201cLike the ferry. Same minute. We don't know why. We've had eight months to work out why.\u201d",
+      "Mara looked at the wall of receivers, at the four monitors breathing their slow green breath, at the pencil in her hand that had written two years and four months of identical numbers and one week of impossible ones.",
+      "\u201cHow many times,\u201d she said, \u201chave you done this?\u201d",
+      "A chair moved. The room with all its people in it went very still, all at once, the way a room does when someone has said the thing out loud.",
+      "\u201cThis is the ninth,\u201d Jóna said. \u201cThe eighth was a man in Tórshavn. The seventh was a woman in Tromsø. Before that we stopped counting, and then we started again, because it seemed disrespectful not to.\u201d",
+      "\u201cDid they help?\u201d",
+      "\u201cThey listened,\u201d Jóna said. \u201cThat's not nothing. Nine hundred metres of water is not nothing either, and neither is nineteen hours. There's a boat at the pier, Mara. There has been a boat at the pier since the spring of 2024. Nobody has ever asked us whose it is, because nobody has ever believed us long enough to get that far.\u201d",
+      "Mara set the pencil down. Outside, the wind came off the lava field and leaned on the window, and the twelve antennas leaned with it, listening.",
+      "\u201cAsk me on Thursday,\u201d she said.",
+      "She closed the logbook. Then she opened it again, and wrote the date, and under the date she wrote: <i>Booked the week off. Told the ministry. They didn't answer. That's permission where I'm from.</i>"
+    ]
+  }
+];
+
+const $ = s => document.querySelector(s);
+
+function renderTOC(){
+  $("#toclist").innerHTML = chapters.map(c => `
+    <a href="#/ch/${c.n}">
+      <span><span class="n">Chapter ${c.n}</span><span class="t">${c.title}</span></span>
+      <span class="len">${c.len}</span>
+    </a>`).join("");
+}
+
+function renderChapter(n){
+  const c = chapters.find(x => x.n === n);
+  if(!c){ location.hash = "#/"; return; }
+  $("#titlepage").classList.add("hidden");
+  $("#reader").classList.remove("hidden");
+  $("#rbnum").textContent = "Chapter " + c.n + " of 3";
+  const paras = c.body.map(t => `<p>${t}</p>`).join("");
+  const prev = c.n > 1 ? `<a class="btn ghost" href="#/ch/${c.n-1}">← Chapter ${c.n-1}</a>` : `<a class="btn ghost" href="#/">← Contents</a>`;
+  const next = c.n < 3
+    ? `<a class="btn" href="#/ch/${c.n+1}">Chapter ${c.n+1} →</a>`
+    : `<a class="btn" href="${WAITLIST}">Get early access →</a>`;
+  const cta = c.n < 3 ? `
+    <div class="endcta">
+      <h3>This is what reading should feel like</h3>
+      <p>No signup to read. No ads in the middle of a paragraph. No algorithm deciding you're done.
+         ChapterOne is a serial fiction platform that pays creators 70% and never asks for exclusivity.
+         We're opening to the public soon — get on the list.</p>
+      <a class="btn" href="${WAITLIST}">Join the waitlist →</a>
+    </div>` : `
+    <div class="endcta">
+      <h3>That's the end of the sample.</h3>
+      <p>Chapter four exists. It's just not written yet — because on ChapterOne, chapters arrive one at a time
+         and you get to be there when they do. Two hundred and twelve people are waiting.
+         Want to find out how many are left?</p>
+      <a class="btn" href="${WAITLIST}">Join the waitlist →</a>
+    </div>`;
+  $("#prosebody").innerHTML = `
+    <h2>${c.title}</h2>
+    <div class="chmeta">Chapter ${c.n} · The Signal Keeper · ${c.len} read</div>
+    ${paras}
+    ${cta}
+    <div class="navbtns">${prev}${next}</div>`;
+  window.scrollTo({top:0,behavior:"instant"});
+}
+
+function route(){
+  const m = location.hash.match(/^#\/ch\/(\d+)$/);
+  if(m){
+    renderChapter(parseInt(m[1],10));
+  } else {
+    $("#reader").classList.add("hidden");
+    $("#titlepage").classList.remove("hidden");
+    window.scrollTo({top:0,behavior:"instant"});
+  }
+}
+
+renderTOC();
+if(!location.hash) location.hash = "#/";
+window.addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
