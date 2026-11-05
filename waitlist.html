@@ -212,7 +212,7 @@
 
       // Path 1: IndieStack API (via Cloudflare tunnel)
       try {
-        await fetch('https://harrison-drums-dream-developers.trycloudflare.com/api/subscribe', {
+        await fetch('https://api.trycloudflare.com/api/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, role, source: 'web' })
